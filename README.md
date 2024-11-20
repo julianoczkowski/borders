@@ -4,9 +4,8 @@ A Chrome extension that helps developers visualize webpage layouts by outlining 
 
 ## Features
 
-- 🎨 Outline HTML elements with different colors based on nesting level
+- 🎨 Outline HTML elements
 - 📏 Display element dimensions and properties on hover
-- 🔄 Toggle between outline and border styles
 - 🌗 Supports dark mode
 - ⚡ Performance optimized with minimal impact on page load
 - 💾 Remembers your preferences

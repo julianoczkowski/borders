@@ -21,29 +21,27 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 function toggleborders() {
   try {
     if (bordersEnabled) {
-      // Add borders-active class to body
       document.body.classList.add("borders-active");
 
-      // Inject the CSS
       const style = document.createElement("style");
       style.id = "borders-style";
       style.textContent = `
-        .borders-active * {
+        .borders-active *:not(path) {
           outline: 1px solid rgb(3, 135, 250) !important;
         }
-        .borders-active * * {
+        .borders-active *:not(path) *:not(path) {
           outline: 1px solid rgba(0, 128, 255) !important;
         }
-        .borders-active * * * {
+        .borders-active *:not(path) *:not(path) *:not(path) {
           outline: 1px solid rgba(0, 123, 255) !important;
         }
-        .borders-active * * * * {
+        .borders-active *:not(path) *:not(path) *:not(path) *:not(path) {
           outline: 1px solid rgb(0, 94, 255) !important;
         }
-        .borders-active * * * * * {
+        .borders-active *:not(path) *:not(path) *:not(path) *:not(path) *:not(path) {
           outline: 1px solid rgb(0, 128, 255) !important;
         }
-        .borders-active * * * * * * {
+        .borders-active *:not(path) *:not(path) *:not(path) *:not(path) *:not(path) *:not(path) {
           outline: 1px solid rgb(40, 96, 249) !important;
         }
       `;
